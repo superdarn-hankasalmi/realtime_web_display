@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.cs">
+	<link rel="stylesheet" type="text/css" href="realtimedisplay.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+	<script src='https://code.jquery.com/jquery-2.0.3.js'></script>
+	<script src="realtimedisplay.js"></script>
+</head>
+
+<body>
+    Hankasalmi radar University of Leicester
+    <div id="globediv" class="globe-style"></div>
+	<div id="options" class="options-style table-responsive">
+
+			<table id="radartable" class="table-style text-align">
+
+
+		  		<tr>
+
+
+		  		  <td>Radar Mode</td>
+
+                  <td id="hankasalmicp"></td>
+
+		  		</tr>
+		  		<tr>
+		  		  <td>Frequency(kHz)</td>
+
+		  		  <td id="hankasalmifreq"></td>
+
+		  		</tr>
+		  		<tr>
+		  		  <td>noise</td>
+
+		  		  <td id="hankasalminoise"></td>
+
+
+		  		</tr>
+		  		<tr>
+		  		  <td>Averages</td>
+
+		  		  <td id="hankasalmiave"></td>
+
+
+		  		</tr>
+		  		<tr>
+		  		  <td>Rsep</td>
+
+		  		  <td id="hankasalmirsep"></td>
+
+
+		  		</tr>
+		  		<tr>
+		  		  <td>1st Range(km)</td>
+
+		  		  <td id="hankasalmifrang"></td>
+
+
+		  		</tr>
+		  		<tr>
+		  		  <td>Time(UTC)</td>
+
+		  		  <td id="hankasalmitime"></td>
+
+		  		</tr>
+		  		<tr>
+		  		  <td>Show/Hide</td>
+
+                  <td><input type="checkbox" name="hankasalmi" value="Hankasalmi"></td>
+
+
+
+		  		</tr>
+
+			</table>
+	</div>
+	<div id="description" class="description-style"></div>
+	<div class="radio-div-style">
+		<form action="" class="radio-form-style text-align">
+		<input type="radio" name="distype" value="pwr">Signal to noise ratio
+		<input type="radio" name="distype" value="width">Spectral width
+		<input type="radio" name="distype" value="velocity" checked="">Velocity
+		<input type="radio" name="distype" value="elevation">Elevation
+		</form>
+	</div>
+	<div class="colorgrad-div-style">
+		<div id="colorgrad" class="colorgrad-style"></div>
+	</div>
+
+<!--	<div style="float:right;height:100vh;width:34%;">
+		<div style="position:absolute;bottom:0;font-size:large;">Scroll to zoom. Click and drag to rotate.</div>
+	</div> -->
+
+</body>
+
+<footer>
+    <script src="realtimedisplay.js"></script>
+</footer>
